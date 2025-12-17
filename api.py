@@ -178,12 +178,14 @@ def register():
     # Hash de la contraseña
     hashed_password = bcrypt.generate_password_hash(password).decode("utf-8")
 
-    # Crear usuario
+    # Crear usuario con 7 días de prueba PRO GRATIS
+    trial_end = datetime.now() + timedelta(days=7)
     users[email] = {
         "password": hashed_password,
         "name": name,
         "is_admin": False,
-        "is_pro": False,
+        "is_pro": True,  # PRO por 7 días
+        "trial_end": trial_end.isoformat(),  # Fecha fin de prueba
         "created_at": datetime.now().isoformat(),
         "downloads_count": 0,
     }
@@ -195,9 +197,15 @@ def register():
 
     return jsonify(
         {
-            "message": "User registered successfully",
+            "message": "¡Bienvenido! Tienes 7 días de PRO GRATIS 🎉",
             "token": token,
-            "user": {"email": email, "name": name, "is_pro": False, "is_admin": False},
+            "user": {
+                "email": email,
+                "name": name,
+                "is_pro": True,
+                "is_admin": False,
+                "trial_days_left": 7,
+            },
         }
     )
 
@@ -342,8 +350,27 @@ def check_user_limit(email):
     if not user:
         return False, 0, "UNKNOWN"
 
-    # Si es PRO, sin límites
+    # Verificar si el trial ha expirado
+    if user.get("trial_end"):
+        trial_end = datetime.fromisoformat(user["trial_end"])
+        now = datetime.now()
+        
+        if now > trial_end:
+            # Trial expirado, quitar PRO
+            users = load_users()
+            users[email]["is_pro"] = False
+            users[email]["trial_expired"] = True
+            save_users(users)
+            user["is_pro"] = False
+
+    # Si es PRO (o en trial), sin límites
     if user.get("is_pro", False):
+        # Calcular días restantes del trial
+        if user.get("trial_end"):
+            trial_end = datetime.fromisoformat(user["trial_end"])
+            days_left = (trial_end - datetime.now()).days
+            if days_left > 0:
+                return True, "∞", f"PRO (Trial: {days_left} días)"
         return True, "∞", "PRO"
 
     # Contar descargas del mes actual

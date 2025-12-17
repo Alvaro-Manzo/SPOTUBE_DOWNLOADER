@@ -1,0 +1,9 @@
+{
+  "admin@spotube.com": {
+    "password": "$2b$12$liMc6OjMmioZA225Vk6iVuiHOZzK9PhAARgJRgc0Uy6CzBkUvL1yq",
+    "is_admin": true,
+    "is_pro": true,
+    "created_at": "2025-12-17T11:17:48.550472",
+    "downloads_count": 0
+  }
+}
