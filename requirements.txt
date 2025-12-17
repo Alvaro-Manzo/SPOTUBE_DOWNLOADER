@@ -1,1 +1,14 @@
-spotdl
+# Core dependencies
+spotdl>=4.2.0
+
+# Optional dependencies for advanced features
+spotipy>=2.23.0  # Para obtener info de playlists
+requests>=2.31.0  # Para peticiones HTTP
+rich>=13.7.0  # Para output colorido en terminal (opcional)
+
+# GUI dependencies (incluidas en Python estándar)
+# tkinter - Viene con Python
+
+# Sistema y utilidades
+pathlib2>=2.3.7; python_version < '3.4'
+
