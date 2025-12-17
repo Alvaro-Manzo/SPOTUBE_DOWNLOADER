@@ -1,12 +1,13 @@
 """
 Tests para Spotify Downloader PRO
 """
+
 import pytest
 import os
 import sys
 
 # Agregar el directorio raíz al path
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 
 @pytest.fixture
@@ -26,6 +27,7 @@ def test_imports():
     try:
         import main
         import api
+
         assert True
     except ImportError as e:
         pytest.fail(f"Error importing modules: {e}")
@@ -34,14 +36,14 @@ def test_imports():
 def test_zip_creation(test_output_dir):
     """Test creación de archivo ZIP"""
     import zipfile
-    
+
     test_output_dir.mkdir(parents=True, exist_ok=True)
     zip_path = test_output_dir / "test.zip"
-    
+
     # Crear un ZIP de prueba
-    with zipfile.ZipFile(zip_path, 'w') as zipf:
+    with zipfile.ZipFile(zip_path, "w") as zipf:
         zipf.writestr("test.txt", "Hello World")
-    
+
     assert zip_path.exists()
     assert zip_path.stat().st_size > 0
 
@@ -61,37 +63,36 @@ def test_environment_variables():
 def test_directories_creation(test_output_dir):
     """Test creación de directorios necesarios"""
     test_output_dir.mkdir(parents=True, exist_ok=True)
-    
+
     downloads_dir = test_output_dir / "downloads"
     temp_dir = test_output_dir / "temp"
-    
+
     downloads_dir.mkdir(exist_ok=True)
     temp_dir.mkdir(exist_ok=True)
-    
+
     assert downloads_dir.exists()
     assert temp_dir.exists()
 
 
-@pytest.mark.parametrize("quality,bitrate", [
-    ("low", "128k"),
-    ("medium", "192k"),
-    ("high", "320k"),
-])
+@pytest.mark.parametrize(
+    "quality,bitrate",
+    [
+        ("low", "128k"),
+        ("medium", "192k"),
+        ("high", "320k"),
+    ],
+)
 def test_quality_mapping(quality, bitrate):
     """Test mapeo de calidades"""
-    quality_map = {
-        'low': '128k',
-        'medium': '192k',
-        'high': '320k'
-    }
+    quality_map = {"low": "128k", "medium": "192k", "high": "320k"}
     assert quality_map[quality] == bitrate
 
 
 def test_file_extensions():
     """Test que se manejan correctamente las extensiones"""
     test_files = ["song.mp3", "track.m4a", "audio.wav"]
-    mp3_files = [f for f in test_files if f.endswith('.mp3')]
-    
+    mp3_files = [f for f in test_files if f.endswith(".mp3")]
+
     assert len(mp3_files) == 1
     assert mp3_files[0] == "song.mp3"
 
