@@ -4,6 +4,9 @@ spotdl>=4.2.0
 # Backend API
 flask>=3.0.0
 flask-cors>=4.0.0
+flask-login>=0.6.3
+flask-bcrypt>=1.0.1
+pyjwt>=2.8.0
 
 # Optional dependencies for advanced features
 spotipy>=2.23.0  # Para obtener info de playlists
