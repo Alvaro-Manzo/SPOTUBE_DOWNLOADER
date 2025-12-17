@@ -10,6 +10,15 @@ spotipy>=2.23.0  # Para obtener info de playlists
 requests>=2.31.0  # Para peticiones HTTP
 rich>=13.7.0  # Para output colorido en terminal (opcional)
 
+# Development dependencies
+pytest>=7.4.0  # Testing framework
+pytest-cov>=4.1.0  # Coverage para tests
+pytest-watch>=4.2.0  # Watch mode para tests
+black>=23.0.0  # Code formatter
+flake8>=6.0.0  # Linter
+mypy>=1.0.0  # Type checking
+pre-commit>=3.0.0  # Git hooks
+
 # GUI dependencies (incluidas en Python estándar)
 # tkinter - Viene con Python
 

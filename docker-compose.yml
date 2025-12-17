@@ -1,0 +1,61 @@
+version: '3.8'
+
+services:
+  # Backend API
+  api:
+    build: .
+    container_name: spotify-downloader-api
+    ports:
+      - "5001:5001"
+    environment:
+      - FLASK_ENV=production
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - ./downloads:/app/downloads
+      - ./temp_downloads:/app/temp_downloads
+    restart: unless-stopped
+    networks:
+      - spotify-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5001/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Frontend Web
+  web:
+    image: python:3.11-slim
+    container_name: spotify-downloader-web
+    ports:
+      - "8000:8000"
+    working_dir: /app/web
+    command: python -m http.server 8000
+    volumes:
+      - ./web:/app/web:ro
+    restart: unless-stopped
+    networks:
+      - spotify-network
+    depends_on:
+      - api
+
+  # Redis (para caché futuro)
+  redis:
+    image: redis:7-alpine
+    container_name: spotify-downloader-redis
+    ports:
+      - "6379:6379"
+    restart: unless-stopped
+    networks:
+      - spotify-network
+    volumes:
+      - redis-data:/data
+    command: redis-server --appendonly yes
+
+networks:
+  spotify-network:
+    driver: bridge
+
+volumes:
+  redis-data:
+    driver: local
