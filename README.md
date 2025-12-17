@@ -222,8 +222,7 @@ output_dir="mis_descargas"  # Cambia el nombre
 ## ⚠️ Notas Importantes
 
 ### Límites de YouTube
-- Spotify no permite descarga directa
-- Usamos YouTube como fuente de audio
+- Usamos YouTube y Spotify como fuente de audio
 - YouTube puede limitar descargas masivas
 - El script espera automáticamente cuando hay límites
 
@@ -356,10 +355,7 @@ Ver LICENSE para más detalles.
 ---
 
 ## 💖 Agradecimientos
-
-- **spotdl** - Por el motor de descarga
-- **Python** - Por el increíble lenguaje
-- **Comunidad Open Source** - Por inspirar y contribuir
+- **a mi cerebro por permitirme pensar en esto**
 - **Tú** - Por usar este proyecto
 
 ---
@@ -383,3 +379,4 @@ Si este proyecto te fue útil:
 [⬆ Volver arriba](#-spotify-downloader-pro)
 
 </div>
+
