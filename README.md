@@ -39,8 +39,7 @@
 
 1. **Clona el repositorio**
 ```bash
-git clone https://github.com/Alvaro-Manzo/spotify-playlist-downloader.git
-cd spotify-playlist-downloader
+git clone https://github.com/Alvaro-Manzo/SPOTUBE_DOWNLOADER.git
 ```
 
 2. **Crea un entorno virtual** (recomendado)
@@ -123,7 +122,7 @@ spotify-playlist-downloader/
 ## ⚠️ Notas Importantes
 
 - **Límites de YouTube**: Algunas canciones pueden fallar por límites de tasa de YouTube. El script continuará con las demás.
-- **Tiempo de descarga**: Depende del tamaño de tu playlist (puede tomar varios minutos).
+- **Tiempo de descarga**: Depende del tamaño de tu playlist (puede tomar varios minutos u horas :( ).
 - **Calidad**: Las canciones se descargan en la mejor calidad disponible desde YouTube.
 - **Uso legal**: Solo para uso personal. Respeta los derechos de autor.
 
