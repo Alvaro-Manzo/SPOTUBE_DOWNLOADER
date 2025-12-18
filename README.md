@@ -348,7 +348,7 @@ Ver LICENSE para más detalles.
 **Alvaro Manzo**
 
 [![GitHub](https://img.shields.io/badge/GitHub-Alvaro--Manzo-181717?style=for-the-badge&logo=github)](https://github.com/Alvaro-Manzo)
-[![Email](https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail)](mailto:tu-email@ejemplo.com)
+[![Email](https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail)](mailto:jogobonito029@gmail.com)
 
 </div>
 
@@ -379,4 +379,5 @@ Si este proyecto te fue útil:
 [⬆ Volver arriba](#-spotify-downloader-pro)
 
 </div>
+
 
