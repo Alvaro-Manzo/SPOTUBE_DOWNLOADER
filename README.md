@@ -10,7 +10,7 @@
 
 **🌎 El MEJOR descargador GRATUITO de música del mundo**
 
-Descarga playlists completas de Spotify como MP3 de alta calidad
+Descarga playlists completas de Spotify como MP3 de alta calidad.
 
 [✨ Características](#-características-pro) • [🚀 Instalación](#-instalación-rápida) • [💻 Uso](#-cómo-usar) • [🎨 GUI](#️-interfaz-gráfica-gui) • [📖 Docs](#-documentación)
 
@@ -379,5 +379,6 @@ Si este proyecto te fue útil:
 [⬆ Volver arriba](#-spotify-downloader-pro)
 
 </div>
+
 
 
