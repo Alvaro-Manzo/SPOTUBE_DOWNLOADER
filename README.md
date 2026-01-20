@@ -45,7 +45,7 @@ Descarga playlists completas de Spotify como MP3 de alta calidad.
 - 🖥️ **GUI moderna** - Diseño tipo Spotify, súper fácil de usar
 - ⌨️ **CLI avanzada** - Para usuarios power
 - 📱 **Responsive** - Funciona en cualquier pantalla
-- 🎯 **Intuitiva** - No necesitas ser programador
+- 🎯 **Intuitiva** - No necesitas ser programador :)
 
 ### 🎵 Calidad
 - 🎚️ **Múltiples calidades**: 128kbps, 192kbps, 320kbps
@@ -379,6 +379,7 @@ Si este proyecto te fue útil:
 [⬆ Volver arriba](#-spotify-downloader-pro)
 
 </div>
+
 
 
 
