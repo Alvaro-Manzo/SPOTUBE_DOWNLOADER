@@ -149,7 +149,7 @@ python main_pro.py
 **Ejemplo:**
 ```
 ⚙️ CONFIGURACIÓN
-Calidad de audio (low/medium/high) [high]: high
+Calidad de audio (low/medium/high) [high]: high (alta)
 Hilos paralelos (1-5) [3]: 5
 
 📋 MODO DE DESCARGA
@@ -379,6 +379,7 @@ Si este proyecto te fue útil:
 [⬆ Volver arriba](#-spotify-downloader-pro)
 
 </div>
+
 
 
 
