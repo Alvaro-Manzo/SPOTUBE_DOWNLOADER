@@ -1,0 +1,118 @@
+name: 🐛 Bug Report
+description: Report a bug or unexpected behavior in Spotube Downloader
+title: "🐛 [Bug]: "
+labels: ["bug", "needs-triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! 🙏
+        Please fill in as much detail as possible so we can fix it quickly.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 📝 Bug Description
+      description: A clear and concise description of what the bug is.
+      placeholder: "When I try to download a playlist, the app crashes with..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 🔁 Steps to Reproduce
+      description: Steps to reproduce the behavior.
+      placeholder: |
+        1. Run `python main.py`
+        2. Paste playlist URL '...'
+        3. Press Enter
+        4. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: ✅ Expected Behavior
+      description: What did you expect to happen?
+      placeholder: "The playlist should download and create a ZIP file."
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: ❌ Actual Behavior
+      description: What actually happened?
+      placeholder: "The app crashes with a KeyError after a few seconds."
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: 📋 Error Logs
+      description: Paste any relevant error messages or logs here.
+      render: shell
+      placeholder: "Traceback (most recent call last): ..."
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: 🖥️ Operating System
+      options:
+        - Windows 10
+        - Windows 11
+        - macOS 12 (Monterey)
+        - macOS 13 (Ventura)
+        - macOS 14 (Sonoma)
+        - Ubuntu 20.04
+        - Ubuntu 22.04
+        - Other Linux
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: python_version
+    attributes:
+      label: 🐍 Python Version
+      options:
+        - "3.8"
+        - "3.9"
+        - "3.10"
+        - "3.11"
+        - "3.12"
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: mode
+    attributes:
+      label: 🚀 How were you running the app?
+      options:
+        - GUI (python gui.py)
+        - CLI Basic (python main.py)
+        - CLI Pro (python main_pro.py)
+        - API (python api.py)
+        - Docker
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: 📸 Screenshots
+      description: If applicable, add screenshots to help explain your problem.
+      placeholder: "Drag and drop images here..."
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: 💡 Additional Context
+      description: Any other information that might be helpful.
+      placeholder: "This started happening after I updated spotdl to version X..."
