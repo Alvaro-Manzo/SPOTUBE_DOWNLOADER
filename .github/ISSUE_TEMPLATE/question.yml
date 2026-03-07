@@ -1,0 +1,76 @@
+name: ❓ Question / Support
+description: Ask a question or get help using Spotube Downloader
+title: "❓ [Question]: "
+labels: ["question", "support"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Need help? We're happy to assist! 😊
+        Before asking, please check the [README](../README.md) and existing issues.
+
+  - type: dropdown
+    id: question_type
+    attributes:
+      label: 🏷️ Question Type
+      options:
+        - 🛠️ Installation / Setup
+        - 💻 How to use a feature
+        - 🐍 Python / Dependency issue
+        - 🐳 Docker
+        - ⚡ Performance
+        - 🔐 Authentication / Spotify
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: 💬 Your Question
+      description: What would you like to know?
+      placeholder: "How do I download a playlist with maximum quality?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: tried
+    attributes:
+      label: 🔍 What have you already tried?
+      description: Share what you've already attempted so we don't suggest the same things.
+      placeholder: "I read the README and tried running `python main.py` but..."
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: 🖥️ Operating System
+      options:
+        - Windows 10
+        - Windows 11
+        - macOS 12 (Monterey)
+        - macOS 13 (Ventura)
+        - macOS 14 (Sonoma)
+        - Ubuntu 20.04
+        - Ubuntu 22.04
+        - Other Linux
+        - Other
+
+  - type: dropdown
+    id: python_version
+    attributes:
+      label: 🐍 Python Version
+      options:
+        - "3.8"
+        - "3.9"
+        - "3.10"
+        - "3.11"
+        - "3.12"
+        - Other
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: 📋 Additional Context
+      description: Any extra information (logs, screenshots, etc.) that might help.

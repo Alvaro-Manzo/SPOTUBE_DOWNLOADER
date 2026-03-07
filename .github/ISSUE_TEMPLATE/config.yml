@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📖 README & Documentation
+    url: https://github.com/Alvaro-Manzo/SPOTUBE_DOWNLOADER/blob/main/README.md
+    about: Read the full documentation before opening an issue.
+  - name: 💬 GitHub Discussions
+    url: https://github.com/Alvaro-Manzo/SPOTUBE_DOWNLOADER/discussions
+    about: Use Discussions for general questions, ideas, and community chat.
+  - name: 🤝 Contributing Guide
+    url: https://github.com/Alvaro-Manzo/SPOTUBE_DOWNLOADER/blob/main/CONTRIBUTING.md
+    about: Read the contributing guide before submitting a Pull Request.

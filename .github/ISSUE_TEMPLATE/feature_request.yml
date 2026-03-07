@@ -1,0 +1,87 @@
+name: ✨ Feature Request
+description: Suggest a new feature or improvement for Spotube Downloader
+title: "✨ [Feature]: "
+labels: ["enhancement", "needs-triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Got an idea to make Spotube Downloader even better? 🚀
+        We love hearing new ideas! Fill in the details below.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 🤔 Is your feature request related to a problem?
+      description: A clear and concise description of the problem you're facing.
+      placeholder: "I'm always frustrated when I can't download from Apple Music..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: 💡 Proposed Solution
+      description: Describe the feature or improvement you'd like to see.
+      placeholder: "Add support for Apple Music playlists by..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 🔄 Alternatives Considered
+      description: Have you considered any alternative solutions or workarounds?
+      placeholder: "I tried using X but it doesn't work because..."
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: 📂 Feature Category
+      description: What area of the app does this feature relate to?
+      options:
+        - 🎵 New music source (Apple Music, SoundCloud, etc.)
+        - 🎨 GUI / User Interface
+        - ⌨️ CLI / Command Line
+        - ⚡ Performance / Speed
+        - 🎚️ Audio Quality
+        - 📦 Output Format / Compression
+        - 🔐 Authentication / Accounts
+        - 🐳 Docker / Deployment
+        - 🌍 Internationalization / Localization
+        - 🧪 Testing / Quality
+        - 📝 Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 🔥 Priority
+      description: How important is this feature to you?
+      options:
+        - 🔴 Critical - I can't use the app without it
+        - 🟠 High - It would significantly improve my experience
+        - 🟡 Medium - Nice to have
+        - 🟢 Low - Minor improvement
+    validations:
+      required: true
+
+  - type: textarea
+    id: mockup
+    attributes:
+      label: 🎨 Mockups / Examples
+      description: Any visual examples, mockups, or links that illustrate your idea?
+      placeholder: "Here's a sketch of what the UI could look like: [image]"
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: 🤝 Would you like to contribute?
+      options:
+        - label: I'm willing to submit a Pull Request for this feature
+        - label: I can help with testing this feature
+        - label: I can help with documentation
